@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+   <meta content="utf-8" http-equiv="encoding">
+</head>
+<div class="container">
+   <div class="mapcontainer">
+     <div class="map">Alternative content</div>
+   </div>
+</div>
+
+<script src="lib/jquery-2.2.3.js"></script>
+<script src="lib/jquery.mapael.js"></script>
+<script src="lib/raphael.js"></script>
+<script src="us_counties.js"></script>
+<script type="text/javascript">
+  $(function(){
+     $(".mapcontainer").mapael({
+        map : {
+           name : "us_counties"
+           , defaultArea: {
+              attrs : {
+                 fill : "#f4f4e8"
+                 , stroke: "#00a1fe"
+              }
+              , attrsHover : {
+                 fill: "#a4e100"
+              }
+           }
+        }
+     });
+  });
+</script>
